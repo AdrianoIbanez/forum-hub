@@ -1,4 +1,4 @@
-package br.alura.curso.forumhub.forum_hub.resposta;
+package br.alura.curso.forumhub.forum_hub.models.resposta;
 
 public record DadosResposta(
         String id,

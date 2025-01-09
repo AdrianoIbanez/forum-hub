@@ -1,4 +1,4 @@
-package br.alura.curso.forumhub.forum_hub.usuarios;
+package br.alura.curso.forumhub.forum_hub.models.usuarios;
 
 public record DadosCadastroUsuario(
         String id,
