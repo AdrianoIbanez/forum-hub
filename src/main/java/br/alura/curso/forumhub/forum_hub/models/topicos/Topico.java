@@ -1,11 +1,16 @@
 package br.alura.curso.forumhub.forum_hub.models.topicos;
 
+import br.alura.curso.forumhub.forum_hub.models.Curso;
 import br.alura.curso.forumhub.forum_hub.models.resposta.Resposta;
 import br.alura.curso.forumhub.forum_hub.models.usuarios.Usuario;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
+
+@Entity
+@Table(name = "topicos")
 
 public class Topico {
     @Id
@@ -21,7 +26,7 @@ public class Topico {
     @OneToMany(mappedBy = "topico", cascade = CascadeType.ALL, fetch = FetchType.EAGER )
     private List<Resposta> respostas;
 
-    @ManyToOne(fetch = = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     private Usuario usuario;
     private LocalDateTime horario;
     private Boolean ativo;
@@ -53,7 +58,7 @@ public class Topico {
     }
 
     public void setId(Long id) {
-        this.id;
+        this.id =id;
     }
 
     public String getTitulo() {
@@ -112,7 +117,7 @@ public class Topico {
     public String toString() {
         return "Topico [id=" + id + ", titulo=" + titulo + ", curso=" + curso + ", mensagem=" + mensagem
                 + ", respostas=" + respostas.stream().map(r ->r.getId() + r.getMensagem()).collect(Collectors.toList()) + ", usuario=" + usuario.getNome() + ", horario=" + horario + "]";
-                }
+
     }
 
     public void atualizarTopico(DadosAtualizarTopico dados) {
@@ -123,8 +128,10 @@ public class Topico {
         if (dados.curso() != null) {
             this.curso = dados.curso();
         }
-        if (dados.mensagem() != null {
+
+        if (dados.mensagem() != null) {
             setMensagem(dados.mensagem());
         }
         setHorario(LocalDateTime.now());
+}
 }
