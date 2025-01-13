@@ -1,10 +1,4 @@
-package br.alura.curso.forumhub.forum_hub.models.topicos;
-
-import br.alura.curso.forumhub.forum_hub.models.Curso;
-
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.stream.Collectors;
+package br.alura.curso.forumhub.forum_hub.dtos.topicos;
 
 /*public record DetalharTopico(
         Long id,

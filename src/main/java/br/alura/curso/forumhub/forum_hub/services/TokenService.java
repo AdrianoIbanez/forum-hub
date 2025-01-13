@@ -1,11 +1,6 @@
 package br.alura.curso.forumhub.forum_hub.services;
 
-import br.alura.curso.forumhub.forum_hub.models.usuarios.Usuario;
-import org.springframework.stereotype.Service;
-
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
+import br.alura.curso.forumhub.forum_hub.dtos.usuarios.Usuario;
 
 /*public class TokenService {
 

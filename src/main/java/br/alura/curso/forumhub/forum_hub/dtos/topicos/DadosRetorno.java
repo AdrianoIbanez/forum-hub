@@ -1,8 +1,4 @@
-package br.alura.curso.forumhub.forum_hub.models.topicos;
-
-import br.alura.curso.forumhub.forum_hub.models.Curso;
-
-import java.time.LocalDateTime;
+package br.alura.curso.forumhub.forum_hub.dtos.topicos;
 
 /*public record DadosRetorno(
         Long id,

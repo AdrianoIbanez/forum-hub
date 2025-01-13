@@ -1,15 +1,15 @@
-package br.alura.curso.forumhub.forum_hub.models;
+package br.alura.curso.forumhub.forum_hub.dtos;
 
-/*public enum Curso {
-    JAVA("java"),
-    HTML("html"),
-    CSS("css"),
-    JAVASCRIPT("javascript"),
-    REACT("react"),
-    NODE("node"),
-    PYTHON("python");
-
-    private String cursoOmdb;
+public enum Curso {
+    JAVA,
+    HTML,
+    CSS,
+    JAVASCRIPT,
+    REACT,
+    NODE,
+    PYTHON;
+}
+ /*   private String cursoOmdb;
 
     Curso(String curso) {
         this.cursoOmdb = curso;
@@ -23,4 +23,6 @@ package br.alura.curso.forumhub.forum_hub.models;
         }
         throw new IllegalArgumentException("Curso inválido");
     }
-}
+
+
+}*/

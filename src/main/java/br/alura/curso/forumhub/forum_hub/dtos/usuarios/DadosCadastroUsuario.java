@@ -1,6 +1,6 @@
-package br.alura.curso.forumhub.forum_hub.models.usuarios;
+package br.alura.curso.forumhub.forum_hub.dtos.usuarios;
 
-/*import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record DadosCadastroUsuario(@NotBlank(message = "nome.obrigatorio") String nome,

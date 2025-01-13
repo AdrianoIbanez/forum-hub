@@ -1,6 +1,4 @@
-package br.alura.curso.forumhub.forum_hub.models.resposta;
-
-import java.time.LocalDateTime;
+package br.alura.curso.forumhub.forum_hub.dtos.resposta;
 
 /*public record RetornoResposta(String titulo_topico,
                               String mensagem,

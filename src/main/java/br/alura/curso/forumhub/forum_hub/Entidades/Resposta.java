@@ -1,19 +1,27 @@
-package br.alura.curso.forumhub.forum_hub.models.resposta;
+package br.alura.curso.forumhub.forum_hub.Entidades;
 
-import br.alura.curso.forumhub.forum_hub.models.topicos.Topico;
-import br.alura.curso.forumhub.forum_hub.models.usuarios.Usuario;
+import br.alura.curso.forumhub.forum_hub.dtos.usuarios.Usuario;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+@Entity
+@Table(name = "Resposta")
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = "id")
 
-/*public class Resposta {
+public class Resposta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String mensagem;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+/*    @ManyToOne(fetch = FetchType.LAZY)
     private Usuario usuario;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -79,4 +87,6 @@ import java.time.LocalDateTime;
             setMensagem(dados.mensagem());
         }
     }
+
+ */
 }

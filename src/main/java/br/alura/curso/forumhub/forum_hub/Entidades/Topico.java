@@ -1,27 +1,53 @@
-package br.alura.curso.forumhub.forum_hub.models.topicos;
+package br.alura.curso.forumhub.forum_hub.Entidades;
 
-import br.alura.curso.forumhub.forum_hub.models.Curso;
-import br.alura.curso.forumhub.forum_hub.models.resposta.Resposta;
-import br.alura.curso.forumhub.forum_hub.models.usuarios.Usuario;
+import br.alura.curso.forumhub.forum_hub.dtos.Curso;
+
+import br.alura.curso.forumhub.forum_hub.dtos.topicos.DadosCadastroTopicos;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.stream.Collectors;
 
-/*@Entity
+@Entity
 @Table(name = "topicos")
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = "id")
 
 public class Topico {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String titulo;
+    private String mensagem;
+    private String dataCriacao;
+    private String status;
+    private String autor;
+    private String respostas;
 
     @Enumerated(EnumType.STRING)
     private Curso curso;
-    private String mensagem;
+
+    public Topico(DadosCadastroTopicos dados) {
+        this.id = dados.id();
+        this.titulo = dados.titulo();
+        this.mensagem = dados.mensagem();
+        this.dataCriacao = dados.dataDeCriacao();
+        this.status = dados.estadoDoTopico();
+        this.autor = dados.autor();
+        this.curso = Curso.valueOf(dados.curso());
+        this.respostas = dados.respostas();
+    }
+}
+
+ /*   public Topico() {}
 
     @OneToMany(mappedBy = "topico", cascade = CascadeType.ALL, fetch = FetchType.EAGER )
     private List<Resposta> respostas;
@@ -30,9 +56,6 @@ public class Topico {
     private Usuario usuario;
     private LocalDateTime horario;
     private Boolean ativo;
-
-    public Topico() {}
-
     public Topico(DadosCadastroTopicos dados) {
         setTitulo(dados.titulo());
         setCurso(dados.curso());
@@ -42,15 +65,15 @@ public class Topico {
     }
 
     public Topico(Long id, String titulo, String curso, String mensagem, List<Resposta> respostas, Usuario usuario,
-                  LocalDateTime horario, Boolean ativo) {
-        this.id = id;
-        this.titulo = titulo;
-        this.curso = Curso.fromString(curso);
-        this.mensagem = mensagem;
-        this.respostas = respostas;
-        this.usuario = usuario;
-        this.horario = horario;
-        this.ativo = ativo;
+                LocalDateTime horario, Boolean ativo) {
+            this.id = id;
+            this.titulo = titulo;
+            this.curso = Curso.fromString(curso);
+            this.mensagem = mensagem;
+            this.respostas = respostas;
+            this.usuario = usuario;
+            this.horario = horario;
+            this.ativo = ativo;
     }
 
     public Long getId() {
@@ -134,4 +157,6 @@ public class Topico {
         }
         setHorario(LocalDateTime.now());
 }
-}
+
+
+}*/

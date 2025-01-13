@@ -1,15 +1,21 @@
-package br.alura.curso.forumhub.forum_hub.models.usuarios;
+package br.alura.curso.forumhub.forum_hub.Entidades;
 
-import br.alura.curso.forumhub.forum_hub.models.resposta.Resposta;
-import br.alura.curso.forumhub.forum_hub.models.topicos.Topico;
+import br.alura.curso.forumhub.forum_hub.dtos.resposta.Resposta;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-/*@Entity
+@Entity
 @Table(name = "usuarios")
-public class Usuario implements UserDetails {
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = "id")
+
+public class Usuario { //implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,7 +27,7 @@ public class Usuario implements UserDetails {
 
     private String nome;
 
-    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+/*    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Topico> topicos;
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -140,4 +146,6 @@ public class Usuario implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+ */
 }

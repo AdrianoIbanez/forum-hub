@@ -1,4 +1,4 @@
-package br.alura.curso.forumhub.forum_hub.models.topicos;
+package br.alura.curso.forumhub.forum_hub.dtos.topicos;
 
 public record DadosCadastroTopicos(
         Long id,
@@ -7,5 +7,7 @@ public record DadosCadastroTopicos(
         String dataDeCriacao,
         String estadoDoTopico,
         String autor,
-        String curso) {
+        String curso,
+        String respostas
+) {
 }
