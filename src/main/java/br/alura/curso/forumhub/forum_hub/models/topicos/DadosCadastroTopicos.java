@@ -1,7 +1,7 @@
 package br.alura.curso.forumhub.forum_hub.models.topicos;
 
 public record DadosCadastroTopicos(
-        String id,
+        Long id,
         String titulo,
         String mensagem,
         String dataDeCriacao,

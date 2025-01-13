@@ -1,6 +1,6 @@
 package br.alura.curso.forumhub.forum_hub.models;
 
-public enum Curso {
+/*public enum Curso {
     JAVA("java"),
     HTML("html"),
     CSS("css"),

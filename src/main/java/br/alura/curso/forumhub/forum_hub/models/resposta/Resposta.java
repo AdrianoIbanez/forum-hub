@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
-public class Resposta {
+/*public class Resposta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

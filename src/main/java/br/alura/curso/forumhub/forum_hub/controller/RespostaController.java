@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+/*@RestController
 @RequestMapping("br/alura/curso/forumhub/forum_hub/models/resposta")
 public class RespostaController {
 

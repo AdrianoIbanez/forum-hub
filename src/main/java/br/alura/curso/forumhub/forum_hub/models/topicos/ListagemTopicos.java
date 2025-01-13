@@ -4,7 +4,7 @@ import br.alura.curso.forumhub.forum_hub.models.Curso;
 
 import java.time.LocalDateTime;
 
-public record ListagemTopicos(Long id,
+/*public record ListagemTopicos(Long id,
                               String titulo,
                               Curso curso,
                               String mensagem,

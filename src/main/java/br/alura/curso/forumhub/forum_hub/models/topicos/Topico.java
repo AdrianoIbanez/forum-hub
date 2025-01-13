@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Entity
+/*@Entity
 @Table(name = "topicos")
 
 public class Topico {

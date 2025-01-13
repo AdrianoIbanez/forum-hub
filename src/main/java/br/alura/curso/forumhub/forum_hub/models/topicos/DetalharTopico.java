@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public record DetalharTopico(
+/*public record DetalharTopico(
         Long id,
         String titulo,
         Curso curso,
