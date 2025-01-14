@@ -3,6 +3,7 @@ package br.alura.curso.forumhub.forum_hub.controller;
 
 import br.alura.curso.forumhub.forum_hub.Entidades.Topico;
 import br.alura.curso.forumhub.forum_hub.Repositorios.TopicoRepository;
+import br.alura.curso.forumhub.forum_hub.dtos.topicos.DadosAtualizarTopico;
 import br.alura.curso.forumhub.forum_hub.dtos.topicos.DadosCadastroTopicos;
 import br.alura.curso.forumhub.forum_hub.dtos.topicos.ListagemTopicos;
 import jakarta.transaction.Transactional;
@@ -30,6 +31,19 @@ public class TopicosController {
 
     @GetMapping
     public Page<ListagemTopicos> listar(@PageableDefault(size = 10, sort = {"titulo"}) Pageable paginacao) {
-        return repository.findAll(paginacao).map(ListagemTopicos::new);
+        return repository.findAllByAtivoTrue(paginacao).map(ListagemTopicos::new);
+    }
+
+    @PutMapping
+    @Transactional
+    public void atualizar(@RequestBody @Valid DadosAtualizarTopico dados) {
+        var topico = repository.getReferenceById(dados.id());
+        topico.atualizarInformacoes(dados);
+    }
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void excluir(@PathVariable Long id) {
+        var topico = repository.getReferenceById(id);
+        topico.excluir();
     }
 }

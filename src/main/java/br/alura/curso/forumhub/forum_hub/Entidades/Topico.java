@@ -2,8 +2,10 @@ package br.alura.curso.forumhub.forum_hub.Entidades;
 
 import br.alura.curso.forumhub.forum_hub.dtos.Curso;
 
+import br.alura.curso.forumhub.forum_hub.dtos.topicos.DadosAtualizarTopico;
 import br.alura.curso.forumhub.forum_hub.dtos.topicos.DadosCadastroTopicos;
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -20,8 +22,6 @@ import java.util.List;
 @EqualsAndHashCode(of = "id")
 
 public class Topico {
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -35,7 +35,10 @@ public class Topico {
     @Enumerated(EnumType.STRING)
     private Curso curso;
 
+    private Boolean ativo;
+
     public Topico(DadosCadastroTopicos dados) {
+        this.ativo = true;
         this.id = dados.id();
         this.titulo = dados.titulo();
         this.mensagem = dados.mensagem();
@@ -44,6 +47,32 @@ public class Topico {
         this.autor = dados.autor();
         this.curso = Curso.valueOf(dados.curso());
         this.respostas = dados.respostas();
+    }
+
+    public void atualizarInformacoes(@Valid DadosAtualizarTopico dados) {
+        if (dados.titulo() != null) {
+            this.titulo = dados.titulo();
+        }
+        if (dados.mensagem() != null) {
+            this.mensagem = dados.titulo();
+        }
+        if (dados.dataDeCriacao() != null) {
+            this.dataCriacao = dados.dataDeCriacao();
+        }
+        if (dados.estadoDoTopico() != null) {
+            this.status = dados.estadoDoTopico();
+        }
+        if (dados.autor() != null) {
+            this.autor = dados.autor();
+        }
+        if (dados.curso() != null) {
+        this.curso = Curso.valueOf(dados.curso());
+        }
+
+        }
+
+    public void excluir() {
+        this.ativo = false;
     }
 }
 

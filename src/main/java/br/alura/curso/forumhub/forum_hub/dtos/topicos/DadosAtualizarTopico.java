@@ -1,7 +1,22 @@
 package br.alura.curso.forumhub.forum_hub.dtos.topicos;
 
-/*public record DadosAtualizarTopico(
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+public record DadosAtualizarTopico(
+        @NotNull
+        Long id,
+        @NotBlank
         String titulo,
-        Curso curso,
-        String mensagem) {
+        @NotBlank
+        String mensagem,
+        @NotBlank
+        String dataDeCriacao,
+        @NotBlank
+        String estadoDoTopico,
+        @NotBlank
+        String autor,
+        @NotBlank
+        String curso) {
+
 }
