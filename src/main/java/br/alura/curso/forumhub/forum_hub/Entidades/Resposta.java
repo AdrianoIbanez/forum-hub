@@ -1,6 +1,6 @@
 package br.alura.curso.forumhub.forum_hub.Entidades;
 
-import br.alura.curso.forumhub.forum_hub.dtos.usuarios.Usuario;
+//import br.alura.curso.forumhub.forum_hub.dtos.usuarios.Usuario;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -18,8 +18,10 @@ public class Resposta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String mensagem;
+
+
+}
 
 /*    @ManyToOne(fetch = FetchType.LAZY)
     private Usuario usuario;
@@ -88,5 +90,5 @@ public class Resposta {
         }
     }
 
- */
-}
+
+}*/
