@@ -1,6 +1,7 @@
 package br.alura.curso.forumhub.forum_hub.Entidades;
 
 //import br.alura.curso.forumhub.forum_hub.dtos.resposta.Resposta;
+import br.alura.curso.forumhub.forum_hub.dtos.usuarios.DadosCadastroUsuario;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -15,17 +16,23 @@ import org.springframework.security.core.userdetails.UserDetails;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 
-public class Usuario { //implements UserDetails {
+public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(unique = true)
     private String login;
-
     private String senha;
-
     private String nome;
+
+    private Boolean ativo;
+
+    public Usuario(DadosCadastroUsuario dados) {
+        this.ativo = true;
+        this.id = dados.id();
+        this.login = dados.login();
+        this.senha = dados.senha();
+        this.nome = dados.nome();
+    }
 
 /*    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Topico> topicos;
