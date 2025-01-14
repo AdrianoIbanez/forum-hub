@@ -6,6 +6,8 @@ import jakarta.validation.constraints.NotBlank;
 //@JsonIgnoreProperties(ignoreUnknown = true)
 public record DadosCadastroUsuario(
         @NotBlank
+        Long id,
+        @NotBlank
         String nome,
         @NotBlank
         String login,

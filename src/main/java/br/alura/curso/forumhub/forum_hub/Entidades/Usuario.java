@@ -2,7 +2,9 @@ package br.alura.curso.forumhub.forum_hub.Entidades;
 
 //import br.alura.curso.forumhub.forum_hub.dtos.resposta.Resposta;
 import br.alura.curso.forumhub.forum_hub.dtos.usuarios.DadosCadastroUsuario;
+import br.alura.curso.forumhub.forum_hub.usuarios.DadosAtualizarUsuario;
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -33,6 +35,23 @@ public class Usuario {
         this.senha = dados.senha();
         this.nome = dados.nome();
     }
+
+    public void atualizarInformacoes(@Valid DadosAtualizarUsuario dados) {
+        if (dados.login() != null) {
+            this.login = dados.login();
+        }
+        if (dados.senha() != null) {
+            this.senha = dados.senha();
+        }
+        if (dados.nome() != null) {
+            this.nome = dados.nome();
+        }
+    }
+
+    public void inativar() {
+        this.ativo = false;
+    }
+}
 
 /*    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Topico> topicos;
@@ -154,5 +173,5 @@ public class Usuario {
         return true;
     }
 
- */
-}
+
+}*/

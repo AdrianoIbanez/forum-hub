@@ -6,17 +6,11 @@ import jakarta.validation.constraints.NotNull;
 public record DadosAtualizarTopico(
         @NotNull
         Long id,
-        @NotBlank
         String titulo,
-        @NotBlank
         String mensagem,
-        @NotBlank
         String dataDeCriacao,
-        @NotBlank
         String estadoDoTopico,
-        @NotBlank
         String autor,
-        @NotBlank
         String curso) {
 
 }
