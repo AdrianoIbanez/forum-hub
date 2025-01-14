@@ -1,6 +1,5 @@
 package br.alura.curso.forumhub.forum_hub.usuarios;
 
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public record DadosAtualizarUsuario(

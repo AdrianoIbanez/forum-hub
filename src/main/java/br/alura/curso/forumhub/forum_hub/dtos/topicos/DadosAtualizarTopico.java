@@ -1,6 +1,5 @@
 package br.alura.curso.forumhub.forum_hub.dtos.topicos;
 
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public record DadosAtualizarTopico(
