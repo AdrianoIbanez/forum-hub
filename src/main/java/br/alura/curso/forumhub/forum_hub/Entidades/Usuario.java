@@ -2,14 +2,13 @@ package br.alura.curso.forumhub.forum_hub.Entidades;
 
 //import br.alura.curso.forumhub.forum_hub.dtos.resposta.Resposta;
 import br.alura.curso.forumhub.forum_hub.dtos.usuarios.DadosCadastroUsuario;
-import br.alura.curso.forumhub.forum_hub.usuarios.DadosAtualizarUsuario;
+import br.alura.curso.forumhub.forum_hub.dtos.usuarios.DadosAtualizarUsuario;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
 @Table(name = "usuarios")

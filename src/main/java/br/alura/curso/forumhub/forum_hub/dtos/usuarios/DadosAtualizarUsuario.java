@@ -1,4 +1,4 @@
-package br.alura.curso.forumhub.forum_hub.usuarios;
+package br.alura.curso.forumhub.forum_hub.dtos.usuarios;
 
 import jakarta.validation.constraints.NotNull;
 
