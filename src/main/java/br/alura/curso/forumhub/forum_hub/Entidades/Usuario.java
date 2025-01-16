@@ -9,6 +9,12 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.List;
 
 @Entity(name = "Usuario")
 @Table(name = "usuarios")
@@ -17,7 +23,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 
-public class Usuario {
+public class Usuario implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -50,7 +56,7 @@ public class Usuario {
     public void inativar() {
         this.ativo = false;
     }
-}
+
 
 /*    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Topico> topicos;
@@ -136,7 +142,7 @@ public class Usuario {
                 + ", respostas=" + (respostas.stream().map(r -> r.getId() + r.getMensagem()).collect(Collectors.toList())) + "]";
     }
 
-
+*/
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_USER"));
@@ -173,4 +179,4 @@ public class Usuario {
     }
 
 
-}*/
+}
