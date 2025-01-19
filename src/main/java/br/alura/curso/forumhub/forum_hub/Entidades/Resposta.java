@@ -1,6 +1,6 @@
 package br.alura.curso.forumhub.forum_hub.Entidades;
 
-//import br.alura.curso.forumhub.forum_hub.dtos.usuarios.Usuario;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
