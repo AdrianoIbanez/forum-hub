@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 //@WebFilter(urlPatterns = "/api/**")
-public class LogFilter() {
+//public class LogFilter() {
 /*implements Filter {
 
 /*    @Override

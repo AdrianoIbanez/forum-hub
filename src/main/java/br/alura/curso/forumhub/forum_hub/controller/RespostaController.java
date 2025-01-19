@@ -22,7 +22,7 @@ public class RespostaController {
     @PostMapping
     @Transactional
     public ResponseEntity ResponderTopico(@RequestBody DadosCadastroResposta dados) {
-        System.out.println(dados);
-        return ResponseEntity.ok(new DadosDetalharResposta(null, null, null, null));
+        var dto = respostaService.responder(dados);
+        return ResponseEntity.ok(dto);
     }
 }

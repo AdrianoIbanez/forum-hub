@@ -20,8 +20,6 @@ public class Resposta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String mensagem;
-
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuario_id")
@@ -33,17 +31,16 @@ public class Resposta {
 
     private LocalDateTime data;
 
-}
-    /*
-    public Resposta(Long id, String mensagem, Usuario usuario, Topico topico,LocalDateTime horario) {
+
+
+    public Resposta(Long id, Usuario usuario, Topico topico,LocalDateTime data) {
         this.id = id;
-        this.mensagem = mensagem;
         this.topico = topico;
         this.usuario = usuario;
-        this.horario = horario;
+        this.data = data;
     }
-
-    public Long getId() {
+}
+ /*   public Long getId() {
             return id;
         }
 

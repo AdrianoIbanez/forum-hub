@@ -1,5 +1,6 @@
 package br.alura.curso.forumhub.forum_hub.dtos.resposta;
 
+import br.alura.curso.forumhub.forum_hub.dtos.Curso;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotBlank;
@@ -14,4 +15,6 @@ public record DadosCadastroResposta(
         @NotNull String mensagem,
 
         @NotNull @Future
-        LocalDateTime data) { }
+        LocalDateTime data,
+
+        Curso curso) { }
