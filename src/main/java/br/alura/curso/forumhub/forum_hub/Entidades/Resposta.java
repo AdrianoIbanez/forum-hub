@@ -32,28 +32,19 @@ public class Resposta {
     private LocalDateTime data;
 
 
-
-    public Resposta(Long id, Usuario usuario, Topico topico,LocalDateTime data) {
+    public Resposta(Long id, Usuario usuario, Topico topico, LocalDateTime data) {
         this.id = id;
         this.topico = topico;
         this.usuario = usuario;
         this.data = data;
     }
-}
- /*   public Long getId() {
-            return id;
-        }
 
-        public void setId(Long id) {
-            this.id = id;
+    public Long getId() {
+        return id;
     }
 
-    public String getMensagem() {
-        return mensagem;
-    }
-
-    public void setMensagem(String mensagem) {
-        this.mensagem = mensagem;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Usuario getUsuario() {
@@ -72,14 +63,15 @@ public class Resposta {
         this.topico = topico;
     }
 
-    public LocalDateTime getHorario() {
-        return horario;
+    public LocalDateTime getData() {
+        return data;
     }
 
-    public void setHorario(LocalDateTime horario) {
-        this.horario = horario;
+    public void setData(LocalDateTime data) {
+        this.data = data;
     }
-
+}
+/*
     @Override
     public String toString() {
         return "Resposta [id=" + id + ", mensagem=" + ", usuario=" + usuario.getNome() + ", topico=" + topico.getTitulo()

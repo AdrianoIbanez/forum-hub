@@ -33,6 +33,19 @@ public class Usuario implements UserDetails {
 
     private Boolean ativo;
 
+
+    public Usuario(String login) {
+        this.login = login;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
     public Usuario(DadosCadastroUsuario dados) {
         this.ativo = true;
         this.id = dados.id();
