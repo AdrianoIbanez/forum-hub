@@ -7,16 +7,14 @@ public record ListagemTopicos(Long id,
                               String titulo,
                               Curso curso,
                               String mensagem,
-                              String dataCriacao,
-                              String respostas) {
+                              String dataCriacao) {
 
     public ListagemTopicos(Topico topico) {
         this(topico.getId(),
                 topico.getTitulo(),
                 topico.getCurso(),
                 topico.getMensagem(),
-                topico.getDataCriacao(),
-                topico.getRespostas());
+                topico.getDataCriacao());
     }
 
 }
