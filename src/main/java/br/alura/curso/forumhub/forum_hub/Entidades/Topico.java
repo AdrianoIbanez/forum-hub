@@ -92,6 +92,22 @@ public class Topico {
         this.titulo = titulo;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
     public Curso getCurso() {
         return curso;
     }
@@ -114,6 +130,14 @@ public class Topico {
 
     public void setDataCriacao() {
         this.dataCriacao = dataCriacao;
+    }
+
+    public String getRespostas() {
+        return respostas;
+    }
+
+    public void setRespostas(String respostas) {
+        this.respostas = respostas;
     }
 
     public Boolean getAtivo() {
